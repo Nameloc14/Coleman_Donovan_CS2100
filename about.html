@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ByteMarket | About</title>
+    <link rel="stylesheet" href="project.css">
+</head>
+
+<body>
+
+<header>
+    <div class="logo">ByteMarket</div>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="components.html">Components</a></li>
+            <li><a href="gaming.html">Gaming</a></li>
+            <li><a href="guides.html">Guides</a></li>
+            <li><a href="deals.html">Deals</a></li>
+            <li><a href="about.html" aria-current="page">About</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main class="page">
+    <h1>About ByteMarket</h1>
+    <p>ByteMarket is a student-created website focused on helping users
+        understand computer components, gaming equipment, and PC building.
+        The goal is to make technology easier to understand.</p>
+
+    <!-- contact form section -->
+    <section>
+        <h2>Contact Us</h2>
+        <p>Have a question or suggestion? Fill out the form below and we'll get back to you.</p>
+
+        <form class="contact-form" method="post" action="https://webdevbasics.net/scripts/demo.php">
+
+            <label for="full-name">Full Name</label><br>
+            <input type="text" id="full-name" name="full_name" placeholder="Your name" required><br><br>
+
+            <label for="email">Email Address</label><br>
+            <input type="email" id="email" name="email" placeholder="your@email.com" required><br><br>
+
+            <!-- subject choices -->
+            <fieldset>
+                <legend style="display:none">Subject</legend>
+                <p class="fieldset-title">Subject</p>
+                <label><input type="radio" name="subject" value="components" required> Components</label><br>
+                <label><input type="radio" name="subject" value="gaming"> Gaming</label><br>
+                <label><input type="radio" name="subject" value="guides"> Guides</label><br>
+                <label><input type="radio" name="subject" value="other"> Other</label>
+            </fieldset><br>
+
+            <fieldset>
+                <legend style="display:none">How did you find us?</legend>
+                <p class="fieldset-title">How did you find us?</p>
+                <label><input type="checkbox" name="source" value="search"> Search Engine</label><br>
+                <label><input type="checkbox" name="source" value="social"> Social Media</label><br>
+                <label><input type="checkbox" name="source" value="friend"> A Friend</label><br>
+                <label><input type="checkbox" name="source" value="other"> Other</label>
+            </fieldset><br>
+
+            <label for="message">Message</label><br>
+            <textarea id="message" name="message" rows="5" placeholder="Write your message here..." required></textarea><br><br>
+
+            <button type="submit" class="btn-submit">Send Message</button>
+
+        </form>
+    </section>
+</main>
+
+<footer>
+    <p>&copy; 2026 ByteMarket | Contact | Social Links</p>
+</footer>
+
+</body>
+</html>
