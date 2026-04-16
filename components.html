@@ -23,18 +23,6 @@
 </header>
 
 <main class="content-layout">
-
-    <aside class="sidebar">
-        <h2>Categories</h2>
-        <ul>
-            <li>CPUs</li>
-            <li>GPUs</li>
-            <li>RAM</li>
-            <li>Storage</li>
-            <li>Motherboards</li>
-        </ul>
-    </aside>
-
     <section class="main-content">
         <h1>Computer Components</h1>
         <p>
@@ -43,20 +31,103 @@
             or working, choosing the right hardware matters.
         </p>
 
-        <div class="component-card">
-            <h3>CPUs</h3>
-            <p>The brain of your computer. Determines overall system performance.</p>
+        <!-- details/summary widgets for each component -->
+        <details class="component-details">
+            <summary>CPUs</summary>
+            <p>The CPU (Central Processing Unit) is the brain of your computer. It handles all the instructions
+            from your software and tells other parts what to do. A faster CPU means better overall performance
+            especially for multitasking, gaming, and streaming at the same time.</p>
+            <ul>
+                <li>Clock speed measured in GHz — higher is generally faster</li>
+                <li>More cores help with multitasking and heavy workloads</li>
+                <li>Two main brands: Intel and AMD (Ryzen)</li>
+            </ul>
+        </details>
+
+        <details class="component-details">
+            <summary>GPUs</summary>
+            <p>The GPU (Graphics Processing Unit) handles all the visual output on your screen. It's the most
+            important part for gaming, video editing, and 3D rendering. A stronger GPU means higher frame rates
+            and better visual quality.</p>
+            <ul>
+                <li>VRAM (video memory) determines how much graphical data it can handle</li>
+                <li>Two main brands: NVIDIA and AMD</li>
+                <li>Match your GPU to your monitor resolution for best performance</li>
+            </ul>
+        </details>
+
+        <details class="component-details">
+            <summary>RAM</summary>
+            <p>RAM (Random Access Memory) is your computer's short-term memory. It stores data that your CPU
+            is actively using so it can be accessed quickly. More RAM means your system can handle more tasks
+            at once without slowing down.</p>
+            <ul>
+                <li>16GB is the sweet spot for most gaming and everyday use</li>
+                <li>32GB recommended for content creation and heavy multitasking</li>
+                <li>DDR5 is the latest standard — faster and more efficient than DDR4</li>
+            </ul>
+        </details>
+
+        <details class="component-details">
+            <summary>Storage</summary>
+            <p>Storage is where all your files, games, and the operating system live. SSDs are much faster than
+            old hard drives and make a big difference in how quickly your PC boots and loads games.</p>
+            <ul>
+                <li>NVMe SSDs are the fastest option available</li>
+                <li>500GB is a minimum — 1TB recommended for gaming</li>
+                <li>Consider a secondary drive for extra storage space</li>
+            </ul>
+        </details>
+
+        <details class="component-details">
+            <summary>Motherboards</summary>
+            <p>The motherboard connects all your components together. It determines what CPUs, RAM, and storage
+            you can use, so it's important to choose one that's compatible with the rest of your build.</p>
+            <ul>
+                <li>Make sure the socket matches your CPU brand and generation</li>
+                <li>Check how many RAM slots and M.2 slots it has</li>
+                <li>ATX is the standard size — Micro-ATX and Mini-ITX are smaller options</li>
+            </ul>
+        </details>
+
+        <!-- Intel vs Ryzen section -->
+        <h2 class="section-heading">Intel vs AMD Ryzen</h2>
+        <p>Choosing between Intel and AMD is one of the most common decisions when building a PC.
+        Both make great processors, but they work best with different chipsets and platforms.</p>
+
+        <div class="brand-compare">
+
+            <div class="brand-card">
+                <img src="images/intel.jpg" alt="Intel processor" class="brand-img">
+                <h3>Intel</h3>
+                <p>Intel CPUs pair best with Intel chipset motherboards (like Z790 or B760).
+                Intel's platform is known for strong single-core performance which is great for gaming.
+                Intel also uses its own socket type (LGA), so the CPU and motherboard must both be Intel.</p>
+                <ul>
+                    <li>Best chipsets: Z790 (high-end), B760 (mid-range)</li>
+                    <li>Strong gaming performance</li>
+                    <li>Works best with DDR5 RAM on newer generations</li>
+                </ul>
+            </div>
+
+            <div class="brand-card">
+                <img src="images/ryzen.jpg" alt="AMD Ryzen processor" class="brand-img">
+                <h3>AMD Ryzen</h3>
+                <p>AMD Ryzen CPUs use AMD's AM5 socket and work with AMD chipset motherboards (like X670 or B650).
+                Ryzen is known for great multi-core performance which makes it excellent for streaming,
+                video editing, and productivity alongside gaming.</p>
+                <ul>
+                    <li>Best chipsets: X670E (high-end), B650 (mid-range)</li>
+                    <li>Great multi-core and productivity performance</li>
+                    <li>AM5 platform supports DDR5 and has a long upgrade path</li>
+                </ul>
+            </div>
+
         </div>
 
-        <div class="component-card">
-            <h3>GPUs</h3>
-            <p>Handles graphics and gaming performance.</p>
-        </div>
-
-        <div class="component-card">
-            <h3>RAM</h3>
-            <p>Temporary memory that helps with multitasking and speed.</p>
-        </div>
+        <p class="brand-note">Note: Intel and AMD CPUs are <strong>not</strong> cross-compatible.
+        An Intel CPU requires an Intel motherboard, and an AMD Ryzen CPU requires an AMD motherboard.
+        Always make sure your CPU and motherboard use the same socket and chipset generation.</p>
 
     </section>
 
