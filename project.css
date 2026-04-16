@@ -98,6 +98,23 @@ nav a {
     padding-left: 18px;
 }
 
+a.card {
+    text-decoration: none;
+    color: #e6edf3;
+    text-align: center;
+    display: block;
+}
+a.logo {
+    text-decoration: none;
+    color: white;
+    transition: color 0.2s ease, letter-spacing 0.2s ease;
+    display: inline-block;
+}
+
+a.logo:hover {
+    color: #60a5fa;
+    letter-spacing: 2px;
+}
 .card,
 .component-card,
 .deal-card {
@@ -123,6 +140,9 @@ nav a:hover {
     color: #60a5fa;
 }
 
+nav a[aria-current="page"] {
+    color: #60a5fa;
+}
 @media (max-width: 768px) {
     .page {
         padding: 25px 15px;
