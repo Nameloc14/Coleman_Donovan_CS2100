@@ -12,10 +12,10 @@
     <a href="index.html" class="logo">ByteMarket</a>
     <nav>
         <ul>
-            <li><a href="index.html" aria-current="page">Home</a></li>
+            <li><a href="index.html">Home</a></li>
             <li><a href="components.html">Components</a></li>
             <li><a href="gaming.html">Gaming</a></li>
-            <li><a href="guides.html">Guides</a></li>
+            <li><a href="products.html">Products</a></li>
             <li><a href="deals.html">Deals</a></li>
             <li><a href="about.html">About</a></li>
         </ul>
@@ -27,18 +27,82 @@
     <p>Your go-to hub for computer components, gaming gear, and PC building guides.</p>
 </section>
 
+<!-- Image Slideshow -->
+<section class="slideshow-section">
+    <div class="slideshow" id="slideshow">
+        <div class="slide active">
+            <img src="images/SS1.jpg" alt="Gaming PC build with RGB components">
+        </div>
+        <div class="slide">
+            <img src="images/SS2.jpg" alt="Neon lit PC internals">
+        </div>
+        <div class="slide">
+            <img src="images/SS3.jpg" alt="NVIDIA RTX 3090 Ti graphics card">
+        </div>
+        <div class="slide">
+            <img src="images/SS4.jpg" alt="ASUS ROG liquid cooler">
+        </div>
+        <div class="slide">
+            <img src="images/SS5.jpg" alt="ASUS ROG power supply">
+        </div>
+        <div class="slide">
+            <img src="images/SS6.jpg" alt="High end gaming setup">
+        </div>
+
+        <button class="slide-btn prev" onclick="changeSlide(-1); resetTimer()">&#10094;</button>
+        <button class="slide-btn next" onclick="changeSlide(1); resetTimer()">&#10095;</button>
+
+        <div class="slide-dots" id="slide-dots"></div>
+    </div>
+</section>
+
 <section class="featured">
     <h2>Explore ByteMarket</h2>
     <div class="cards">
-    <a href="components.html" class="card">Computer Components</a>
-    <a href="gaming.html" class="card">Gaming</a>
-    <a href="products.html" class="card">Product Page</a>
-</div>
+        <a href="components.html" class="card">Computer Components</a>
+        <a href="gaming.html" class="card">Gaming</a>
+        <a href="products.html" class="card">PC Building Guides</a>
+    </div>
 </section>
 
 <footer>
     <p>&copy; 2026 ByteMarket | Contact | Social Links</p>
 </footer>
+
+<script>
+    var current = 0;
+    var slides = document.querySelectorAll('.slide');
+    var dotsContainer = document.getElementById('slide-dots');
+
+    // build dots
+    slides.forEach(function(s, i) {
+        var dot = document.createElement('span');
+        dot.className = 'dot' + (i === 0 ? ' active-dot' : '');
+        dot.onclick = function() { goToSlide(i); };
+        dotsContainer.appendChild(dot);
+    });
+
+        function goToSlide(n) {
+        slides[current].classList.remove('active');
+        document.querySelectorAll('.dot')[current].classList.remove('active-dot');
+        current = (n + slides.length) % slides.length;
+        slides[current].classList.add('active');
+        document.querySelectorAll('.dot')[current].classList.add('active-dot');
+        resetTimer();
+}
+
+    function changeSlide(dir) {
+        goToSlide(current + dir);
+    }
+
+    // auto advance every 4 seconds
+var timer = setInterval(function() { changeSlide(1); }, 4000);
+
+function resetTimer() {
+    clearInterval(timer);
+    timer = setInterval(function() { changeSlide(1); }, 4000);
+}
+</script>
 
 </body>
 </html>
