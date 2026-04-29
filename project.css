@@ -642,4 +642,36 @@ footer {
         height: 220px;
     }
 }
+ /* recommended build section inside deal cards */
+.recommended-build {
+    margin-top: 14px;
+    background-color: #111827;
+    border: 1px solid #2d3a4a;
+    border-radius: 4px;
+    padding: 12px 14px;
+}
+ 
+.rec-title {
+    font-weight: bold;
+    color: #60a5fa;
+    margin: 0 0 8px 0;
+    font-size: 0.9rem;
+}
+ 
+.recommended-build ul {
+    padding-left: 16px;
+    margin: 0 0 8px 0;
+    color: #94a3b8;
+    font-size: 0.85rem;
+    line-height: 1.7;
+}
+ 
+.rec-total {
+    font-weight: bold;
+    color: #e6edf3;
+    font-size: 0.9rem;
+    margin: 6px 0 0 0;
+    border-top: 1px solid #2d3a4a;
+    padding-top: 6px;
+}
  
