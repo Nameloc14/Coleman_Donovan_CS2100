@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">|
+    <meta charset="UTF-8">
     <meta name="description" content="ByteMarket is your go-to hub for PC components, gaming gear, and build guides. Find the best parts for your budget.">
     <title>ByteMarket | Build Smarter. Game Better.</title>
     <link rel="stylesheet" href="project.css">
@@ -13,7 +13,7 @@
     <a href="index.html" class="logo">ByteMarket</a>
     <nav>
         <ul>
-            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html" aria-current="page">Home</a></li>
             <li><a href="components.html">Components</a></li>
             <li><a href="gaming.html">Gaming</a></li>
             <li><a href="products.html">Products</a></li>
@@ -24,8 +24,8 @@
 </header>
 
 <section class="hero">
-    <h1>Welcome to ByteMarket</h1>
-    <p>Your go-to hub for computer components, gaming gear, and PC building guides.</p>
+    <h1 class="hero-title">Welcome to ByteMarket</h1>
+    <p class="hero-sub">Your go-to hub for computer components, gaming gear, and PC building guides.</p>
 </section>
 
 <!-- Image Slideshow -->
@@ -57,12 +57,47 @@
     </div>
 </section>
 
+<!-- Explore cards -->
 <section class="featured">
     <h2>Explore ByteMarket</h2>
     <div class="cards">
-        <a href="components.html" class="card">Computer Components</a>
-        <a href="gaming.html" class="card">Gaming</a>
-        <a href="products.html" class="card">PC Building Guides</a>
+        <a href="components.html" class="card">
+            <div class="card-icon">&#128187;</div>
+            <div class="card-label">Computer Components</div>
+            <div class="card-desc">CPUs, GPUs, RAM and more</div>
+        </a>
+        <a href="gaming.html" class="card">
+            <div class="card-icon">&#127918;</div>
+            <div class="card-label">Gaming</div>
+            <div class="card-desc">Top gaming setups and gear</div>
+        </a>
+        <a href="products.html" class="card">
+            <div class="card-icon">&#128722;</div>
+            <div class="card-label">Products</div>
+            <div class="card-desc">Shop all PC components</div>
+        </a>
+    </div>
+</section>
+
+<!-- Stats section -->
+<section class="stats-section">
+    <div class="stats-grid">
+        <div class="stat-item">
+            <div class="stat-number">20+</div>
+            <div class="stat-label">Products Listed</div>
+        </div>
+        <div class="stat-item">
+            <div class="stat-number">6</div>
+            <div class="stat-label">Categories</div>
+        </div>
+        <div class="stat-item">
+            <div class="stat-number">3</div>
+            <div class="stat-label">Build Tiers</div>
+        </div>
+        <div class="stat-item">
+            <div class="stat-number">$400+</div>
+            <div class="stat-label">Starting Budget</div>
+        </div>
     </div>
 </section>
 
@@ -83,26 +118,26 @@
         dotsContainer.appendChild(dot);
     });
 
-        function goToSlide(n) {
+    function goToSlide(n) {
         slides[current].classList.remove('active');
         document.querySelectorAll('.dot')[current].classList.remove('active-dot');
         current = (n + slides.length) % slides.length;
         slides[current].classList.add('active');
         document.querySelectorAll('.dot')[current].classList.add('active-dot');
         resetTimer();
-}
+    }
 
     function changeSlide(dir) {
         goToSlide(current + dir);
     }
 
     // auto advance every 4 seconds
-var timer = setInterval(function() { changeSlide(1); }, 4000);
+    var timer = setInterval(function() { changeSlide(1); }, 4000);
 
-function resetTimer() {
-    clearInterval(timer);
-    timer = setInterval(function() { changeSlide(1); }, 4000);
-}
+    function resetTimer() {
+        clearInterval(timer);
+        timer = setInterval(function() { changeSlide(1); }, 4000);
+    }
 </script>
 
 </body>
